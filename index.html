@@ -21,6 +21,7 @@
 			color: #f5f5f5;
 		}
         h2 {
+            padding: 0 0 0 10px;
             color: #333;
         }
 
@@ -48,9 +49,20 @@
         p {
             line-height: 1.5;
         }
+
+        /* Hidden Text Styles */
+        .extra {
+            display: none;
+        }
+
+        h2:hover .extra {
+            display: inline-block;
+        }
     </style>
     <h1 style="text-align:center">PORTFOLIO</h1>
-    <h2 style="text-align:center">Erik Maung</h2>
+    <h2>Erik Maung<span class="extra">'s 
+        <a href="https://github.com/erikmaung">GitHub Page</a>
+    </span></h2>
 	<ul>
 		<li><a href="https://erikmaung.github.io/react-blog">
 		<b>React Blog: </b>erikmaung.github.io/react-blog
