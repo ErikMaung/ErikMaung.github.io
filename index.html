@@ -71,10 +71,16 @@
 			height: auto;
 		}
 		
-		/* Styling for the collapsible menu */
-        .collapsible {
-            /* None needed currently! */
+        /* Video Styles */
+        iframe {
+			padding: 1%;
+			width: 40%;
+			height: 40%;
         }
+
+		/* Styling for the collapsible menu (not used)
+        .collapsible {
+        } */
 
         .content {
             display: none;
@@ -87,6 +93,19 @@
         <a href="https://github.com/erikmaung">GitHub Page</a>
     </span></h2>
 	<ul>
+		<li><a href="https://drive.google.com/drive/u/0/folders/1g6mW47TZqYaF-NqA2rzxof8xqGwhe3uy">
+		<b>Basic Programming Portfolio: </b>Google Drive
+		</a></li>
+		<ul>
+			<li><b>Tools: </b>C++, Python, Visual Studio Code, Google Colaboratory</li>
+			<li><b>Notes: </b>Coding Projects from Classwork: Data Structures & Algorithms, Physics Laboratory Assignments</li>
+			<!--
+            <li><b>Resource: </b>
+				<a href="https://colab.google/">Google Colaboratory Notebook</a>
+			</li>
+            -->
+		</ul>
+		
 		<li><a href="https://erikmaung.github.io/react-blog">
 		<b>React Blog: </b>erikmaung.github.io/react-blog
 		</a></li>
@@ -132,10 +151,14 @@
     <!-- Images will be dynamically added here -->
 	</div>
 
+    <h2>Research Presentations</h2>
+
+        <iframe width="40%" height="40%" src="https://www.youtube.com/embed/Etus7gOQbMQ" title="neuroscience: Prerecorded presentation - Panel 2, Presentation 2"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 	<script>
 	const IMG_COUNT = 41; // CHANGE WHEN ADDING/REMOVING IMAGES!
     const imageContainer = document.getElementById("imageContainer");
-
     // Loop to generate img elements
     for (let i = 1; i <= IMG_COUNT; i++) {
         const img = document.createElement("img");
@@ -143,6 +166,10 @@
         img.alt = `Image ${i}`;
         imageContainer.appendChild(img);
     }
+
+    /*  VIDEO EMBED
+        <iframe width="893" height="428" src="https://www.youtube.com/embed/Etus7gOQbMQ" title="neuroscience: Prerecorded presentation - Panel 2, Presentation 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    */
 	</script>
 	
 
