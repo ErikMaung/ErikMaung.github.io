@@ -11,6 +11,10 @@
   margin: 0;
 }
 
+.animated-list a {
+  text-decoration: none;
+}
+
 .list-item {
   opacity: 0;
   transform: translateX(-50px);
@@ -30,4 +34,9 @@
 .list-item:hover {
   transform: translateX(10px);
   transition: transform 0.3s ease;
+}
+
+.resume {
+  display: flex;
+  justify-content: center;
 }

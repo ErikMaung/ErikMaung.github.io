@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './AnimatedList.css';
 
 function AnimatedList() {
-  const [items, setItems] = useState(['Item 1', 'Item 2', 'Item 3', 'Item 4']);
+  const [items, setItems] = useState(['SoundSage MERN Stack Project', 'Generative Text LSTM Movie Review Generator', 'LinkedIn']);
+  const [links, setLinks] = useState(['https://github.com/ethanbresk/soundsage', 'https://github.com/ErikMaung/review-generator', 'https://www.linkedin.com/in/erik-maung/']);
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
@@ -15,10 +16,14 @@ function AnimatedList() {
 
   return (
     <div className="list-container">
+      <img className="resume" src={require('../images/resume.png')} />
       <ul className="animated-list">
         {items.map((item, index) => (
           <li key={index} className={`list-item ${animate ? 'animate' : ''}`}>
-            {item}
+            <a href={links[index]}
+              target="_blank" // Opens the link in a new tab
+              rel="noopener noreferrer" // Security measure to prevent tabnabbing
+            >{item}</a>
           </li>
         ))}
       </ul>
