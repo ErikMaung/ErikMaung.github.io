@@ -14,8 +14,24 @@
 
 .button-group {
   display: flex;
+  gap: 8px;
   justify-content: space-around;
   margin-bottom: 2rem;
+  @media (max-width: 768px) {
+    /* mobile responsive */
+  }
+}
+
+.experiment {
+  margin: 5rem auto;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.footer {
+  bottom: 10px;
+  padding: 2rem;
+  border-radius: 15px;
 }
 
 .list-container {
@@ -25,8 +41,23 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.footer {
-  bottom: 10px;
-  padding: 2rem;
-  border-radius: 15px;
+.rotate {
+  width: 5rem;
+  height: 3.5rem;
+  background-color: mediumpurple;
+  animation-name: rotate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* ANIMATIONS */
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

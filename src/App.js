@@ -21,12 +21,13 @@ function App() {
           Erik Maung's Homepage
         </Title>
         <div className="button-group">
-          <CustomButton label="Home Page" type={isFun ? "danger" : "secondary"} href={"https://erikmaung.github.io/"} scaleValue={scaleValue} />
+          <CustomButton label="Home" type={isFun ? "danger" : "secondary"} href={"https://erikmaung.github.io/"} scaleValue={scaleValue} />
           <CustomButton label="Portfolio" type={isFun ? "primary" : "secondary"} href={"https://erikmaung.github.io/portfolio"} scaleValue={scaleValue} />
-          <CustomButton label={isFun ? "Deactivate Fun" : "Activate Fun"} type={isFun ? "success" : "secondary"} scaleValue={scaleValue} onClick={toggleFun} />
+          <CustomButton label={isFun ? "Fun: ON" : "Fun: OFF"} type={isFun ? "success" : "secondary"} scaleValue={scaleValue} onClick={toggleFun} />
         </div>
         <AnimatedList />
       </Container>
+      <Container className={`experiment rotate`} />
       <Container className="footer">
         &copy; Erik Maung 2024
       </Container>
