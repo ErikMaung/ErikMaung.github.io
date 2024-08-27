@@ -29,7 +29,7 @@ function App() {
           Erik Maung's Homepage
         </Title>
         <div className="button-group">
-          <CustomButton label="Home" type={isFun ? "danger" : "secondary"} href={"https://erikmaung.github.io/"} scaleValue={scaleValue} />
+          <CustomButton label="Home" type={isFun ? "danger" : "secondary"} scaleValue={scaleValue} />
           <CustomButton label="Portfolio" type={isFun ? "primary" : "secondary"} href={"https://erikmaung.github.io/portfolio"} scaleValue={scaleValue} />
           <CustomButton label={isFun ? "Fun: ON" : "Fun: OFF"} type={isFun ? "success" : "secondary"} scaleValue={scaleValue} onClick={toggleFun} />
         </div>
