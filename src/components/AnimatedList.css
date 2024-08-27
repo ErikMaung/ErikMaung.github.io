@@ -3,6 +3,9 @@ h2 {
 }
 
 .list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #fff;
   border-radius: 15px;
   padding: 1rem;
@@ -49,5 +52,5 @@ h2 {
   display: flex;
   justify-content: center;
   max-width: 100vw;
-  width: 82vw;
+  width: 60vw;
 }

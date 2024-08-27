@@ -15,7 +15,10 @@ function App() {
   };
 
   return (
-    <MantineProvider>
+    <MantineProvider className='root'>
+      <Title className='warning'>
+        This website is under renovations. A stable release will be issued by October 2024.
+      </Title>
       <Container className="app-container">
         <Title className="app-title" order={1}>
           Erik Maung's Homepage
