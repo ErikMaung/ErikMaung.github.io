@@ -19,7 +19,8 @@ h2 {
 .flex {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 16px;
+  justify-content: space-between;
   min-width: auto;
 }
 

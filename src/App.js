@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import Draggable from 'react-draggable';
 import { Container, Title, MantineProvider } from '@mantine/core';
 import './App.css';
 import CustomButton from './components/CustomButton';
 import AnimatedList from './components/AnimatedList';
+import Speaker from './components/Speaker';
 
 
 function App() {
@@ -16,6 +18,9 @@ function App() {
 
   return (
     <MantineProvider className='root'>
+      <Draggable>
+        <Speaker isFun={isFun} />
+      </Draggable>
       <Title className='warning'>
         This website is under renovations. A stable release will be issued by October 2024.
       </Title>
@@ -25,7 +30,7 @@ function App() {
         </Title>
         <div className="button-group">
           <CustomButton label="Home" type={isFun ? "danger" : "secondary"} href={"https://erikmaung.github.io/"} scaleValue={scaleValue} />
-          <CustomButton label="Experimental" type={isFun ? "primary" : "secondary"} href={"https://erikmaung.github.io/experimental"} scaleValue={scaleValue} />
+          <CustomButton label="Portfolio" type={isFun ? "primary" : "secondary"} href={"https://erikmaung.github.io/portfolio"} scaleValue={scaleValue} />
           <CustomButton label={isFun ? "Fun: ON" : "Fun: OFF"} type={isFun ? "success" : "secondary"} scaleValue={scaleValue} onClick={toggleFun} />
         </div>
         <AnimatedList />
