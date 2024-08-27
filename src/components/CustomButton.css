@@ -31,5 +31,5 @@
 
 .custom-button:hover {
   cursor: pointer;
-  transform: scale(var(--scale-value)); /* Use the CSS variable for scaling */
+  transform: scale(var(--scale-value));
 }

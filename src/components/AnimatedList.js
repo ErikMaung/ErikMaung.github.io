@@ -5,11 +5,10 @@ function AnimatedList() {
   const [items, setItems] = useState(['SoundSage MERN Stack Project', 'Generative Text LSTM Movie Review Generator', 'UCLA Undergraduate Research Week Presentation 2023 - VR Prism Adaptation']);
   const [links, setLinks] = useState(['https://github.com/ethanbresk/soundsage', 'https://github.com/ErikMaung/review-generator', 'https://www.youtube.com/watch?v=Etus7gOQbMQ']);
   const [items2, setItems2] = useState(['LinkedIn', 'E-Mail: erikmaung1@gmail.com', 'Phone: (626)-624-1560']);
-  const [links2, setLinks2] = useState(['https://www.linkedin.com/in/erik-maung/', undefined, undefined]);
+  const [links2, setLinks2] = useState(['https://www.linkedin.com/in/erik-maung/', 'mailto:blank', undefined]);
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
-    // Trigger the animation after the component is mounted
     const timeout = setTimeout(() => {
       setAnimate(true);
     }, 100);
@@ -28,9 +27,9 @@ function AnimatedList() {
           <ul className="animated-list">
             {items.map((item, index) => (
               <li key={index} className={`list-item ${animate ? 'animate' : ''}`}>
-                <a href={links[index]}
-                  rel="noopener noreferrer" // Security measure to prevent tabnabbing
-                >{item}</a>
+                <a href={links[index]} rel="noopener noreferrer">
+                  <span>{item}</span>
+                </a>
               </li>
             ))}
           </ul>
@@ -39,13 +38,15 @@ function AnimatedList() {
           <h2>Contact</h2>
           <ul className="animated-list">
             {items2.map((item, index) => (
-              <li key={index} className={`list-item ${animate ? 'animate' : ''}`} href={links2[index]} rel="noopener noreferrer">
-                <a>{item}</a>
+              <li key={index} className={`list-item ${animate ? 'animate' : ''}`}>
+                <a href={links2[index]} rel="noopener noreferrer">
+                  <span>{item}</span>
+                </a>
               </li>
             ))}
           </ul>
         </div>
-      </div>
+      </div >
     </>
   );
 }
