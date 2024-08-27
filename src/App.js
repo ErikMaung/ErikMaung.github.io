@@ -25,7 +25,7 @@ function App() {
         </Title>
         <div className="button-group">
           <CustomButton label="Home" type={isFun ? "danger" : "secondary"} href={"https://erikmaung.github.io/"} scaleValue={scaleValue} />
-          <CustomButton label="Portfolio" type={isFun ? "primary" : "secondary"} href={"https://erikmaung.github.io/portfolio"} scaleValue={scaleValue} />
+          <CustomButton label="Experimental" type={isFun ? "primary" : "secondary"} href={"https://erikmaung.github.io/experimental"} scaleValue={scaleValue} />
           <CustomButton label={isFun ? "Fun: ON" : "Fun: OFF"} type={isFun ? "success" : "secondary"} scaleValue={scaleValue} onClick={toggleFun} />
         </div>
         <AnimatedList />

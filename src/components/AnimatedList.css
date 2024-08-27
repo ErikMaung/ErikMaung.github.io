@@ -2,17 +2,6 @@ h2 {
   text-align: center;
 }
 
-.list-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fff;
-  border-radius: 15px;
-  padding: 1rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  margin-bottom: 16px;
-}
-
 .animated-list {
   list-style-type: none;
   padding: 0;
@@ -27,9 +16,28 @@ h2 {
   text-decoration: none;
 }
 
+.flex {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  min-width: auto;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+}
+
 .list-item {
   opacity: 0;
   transform: translateX(-50px);
+  width:inherit;
   margin-bottom: 0.5rem;
   padding: 0.5rem;
   background-color: #ecf0f1;

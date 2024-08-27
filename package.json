@@ -1,8 +1,8 @@
 {
-  "name": "erikmaung.github.io",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://erikmaung.github.io/",
+  "homepage": "https://erikmaung.github.io/portfolio",
   "dependencies": {
     "@mantine/core": "^7.12.1",
     "@mantine/hooks": "^7.12.1",

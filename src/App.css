@@ -33,13 +33,6 @@
   border-radius: 15px;
 }
 
-.list-container {
-  background-color: #fff;
-  border-radius: 15px;
-  padding: 1rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
 .rotate {
   width: 5rem;
   height: 5rem;
