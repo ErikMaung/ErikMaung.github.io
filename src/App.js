@@ -21,7 +21,7 @@ function App() {
       </Title>
       <Container className="app-container">
         <Title className="app-title" order={1}>
-          Erik Maung's Homepage
+          Erik Maung's Portfolio
         </Title>
         <div className="button-group">
           <CustomButton label="Home" type={isFun ? "danger" : "secondary"} href={"https://erikmaung.github.io/"} scaleValue={scaleValue} />
