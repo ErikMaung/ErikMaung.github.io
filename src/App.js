@@ -3,6 +3,8 @@ import Draggable from 'react-draggable';
 import { Container, Title, MantineProvider } from '@mantine/core';
 import './App.css';
 import CustomButton from './components/CustomButton';
+import RngButton from './components/RngButton';
+import IncrementButton from './components/IncrementButton';
 import AnimatedList from './components/AnimatedList';
 import Speaker from './components/Speaker';
 
@@ -10,7 +12,6 @@ import Speaker from './components/Speaker';
 function App() {
   const [isFun, setIsFun] = useState(false);
   const [scaleValue, setScaleValue] = useState(1.1);
-
   const toggleFun = () => {
     setScaleValue(scaleValue === 1.1 ? 1.9 : 1.1);
     setIsFun(!isFun);
@@ -18,9 +19,9 @@ function App() {
 
   return (
     <MantineProvider className='root'>
-      <Draggable>
-        <Speaker isFun={isFun} />
-      </Draggable>
+      {isFun ? <Draggable>
+        <Speaker />
+      </Draggable> : undefined}
       <Title className='warning'>
         This website is under renovations. A stable release will be issued by October 2024.
       </Title>
@@ -36,6 +37,12 @@ function App() {
         <AnimatedList />
       </Container>
       <Container className={`experiment rotate`} />
+      {isFun ?
+        <div className="button-group vertical">
+          <RngButton type={"primary"} scaleValue={scaleValue} />
+          <IncrementButton type={"danger"} scaleValue={scaleValue} />
+        </div>
+        : undefined}
       <Container className="footer">
         &copy; Erik Maung 2024
       </Container>
