@@ -10,6 +10,8 @@ const Speaker = () => {
     const toggleSpeaker = () => {
         console.log("TOGGLED");
         setIsOn(prevState => isDragging ? prevState : !prevState);
+        // double-toggle the prevState upon dragging to create illusion that,
+        // while dragging, user doesn't accidentally toggle speaker
     };
 
     const handleDrag = () => {
