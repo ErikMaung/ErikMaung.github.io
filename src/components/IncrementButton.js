@@ -1,16 +1,17 @@
 import React from 'react';
 import { Button } from '@mantine/core';
 import { useState } from 'react';
+import money from '../common.js';
 import './IncrementButton.css';
 
-function IncrementButton({ type, scaleValue }) {
-  const status = 0;
-  const [increment, setincrement] = useState(status);
+function IncrementButton({ type, scaleValue, incrementAmt, setWantsToPlay, setPoints, points }) {
   const handleincrement = (event) => {
     if (event.shiftKey) {
-      setincrement(increment - 1);
-    } else
-      setincrement(increment + 1);
+      setPoints(prevPoints => prevPoints - incrementAmt);
+    } else {
+      setPoints(prevPoints => prevPoints + incrementAmt);
+    }
+    if (points >= 24) setWantsToPlay(true);
   }
 
   return <Button
@@ -22,7 +23,7 @@ function IncrementButton({ type, scaleValue }) {
     }}
     onClick={handleincrement}
   >
-    {increment}
+    ${money(points)}
   </Button>
 };
 

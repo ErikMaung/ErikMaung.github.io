@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import Draggable from 'react-draggable';
 import { Container, Title, MantineProvider } from '@mantine/core';
 import './App.css';
+import './common.css';
 import CustomButton from './components/CustomButton';
 import RngButton from './components/RngButton';
 import IncrementButton from './components/IncrementButton';
 import AnimatedList from './components/AnimatedList';
 import Speaker from './components/Speaker';
-
+import Game from './Game';
 
 function App() {
   const [isFun, setIsFun] = useState(false);
@@ -38,10 +39,7 @@ function App() {
       </Container>
       <Container className={`experiment rotate`} />
       {isFun ?
-        <div className="button-group vertical">
-          <RngButton type={"primary"} scaleValue={scaleValue} />
-          <IncrementButton type={"danger"} scaleValue={scaleValue} />
-        </div>
+        <Game scaleValue={scaleValue} />
         : undefined}
       <Container className="footer">
         &copy; Erik Maung 2024
