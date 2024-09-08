@@ -18,20 +18,22 @@ const Shop = ({ scaleValue, setIncrementAmt, incrementAmt, mps, setMps, points, 
     }
     const handleShop2 = () => {
         if (points >= shop2Price) {
-            setIncrementAmt(prevIncrementAmt => prevIncrementAmt + 1.0);
+            setMps(prevMps => prevMps + 1.0);
             setPoints(prevPoints => prevPoints - shop2Price);
             setShop2Price(prevShop2Price => prevShop2Price * 1.05 + 1.0);
         }
     }
     return (
         <div className="shop-root vertical">
-            <p className="stats">Money per click: <span className="bold">${money(incrementAmt)}</span></p>
-            <p className="stats">Money per second: <span className="bold">${money(mps)}</span></p>
+            <div className="stats-window">
+                <p className="stats">Money per click: <span className="bold">${money(incrementAmt)}</span></p>
+                <p className="stats">Money per second: <span className="bold">${money(mps)}</span></p>
+            </div>
             <div className="shop-title-container">
                 <p className="shop-title">Shop</p>
             </div>
             <div className="button-group vertical">
-            <Button
+                <Button
                     className={`custom-button`}
                     radius="xl"
                     size="xl"

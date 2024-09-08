@@ -24,3 +24,21 @@
     font-weight: bold;
     font-style: italic;
 }
+
+.stats-window {
+    display: flex;
+    margin: 8px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats {
+    margin-top: 0 !important;
+    transition: opacity 0.5s ease, transform 0.5s ease, background-color 250ms linear;
+    -webkit-transition: opacity 0.5s ease, transform 0.5s ease, background-color 250ms linear;
+    -ms-transition: opacity 0.5s ease, transform 0.5s ease, background-color 250ms linear;
+}
+
+.stats:hover {
+    opacity: 0.5;
+}
