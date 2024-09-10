@@ -20,9 +20,11 @@ function App() {
 
   return (
     <MantineProvider className='root'>
-      {isFun ? <Draggable>
-        <Speaker />
-      </Draggable> : undefined}
+      <div className={`fade-container ${isFun ? 'active' : ''}`}>
+        <Draggable>
+          <Speaker isFun={isFun} />
+        </Draggable>
+      </div>
       <Title className='warning'>
         This website is under renovations. A stable release will be issued by October 2024.
       </Title>
@@ -31,7 +33,7 @@ function App() {
           Erik Maung's Homepage
         </Title>
         <div className="button-group">
-          <CustomButton label="Home" type={isFun ? "danger" : "secondary"} scaleValue={scaleValue} />
+          <CustomButton label="Home" type={isFun ? "secondary" : "secondary"} scaleValue={1.1} />
           <CustomButton label="Portfolio" type={isFun ? "primary" : "secondary"} href={"https://erikmaung.github.io/portfolio"} scaleValue={scaleValue} />
           <CustomButton label={isFun ? "Fun: ON" : "Fun: OFF"} type={isFun ? "success" : "secondary"} scaleValue={scaleValue} onClick={toggleFun} />
         </div>

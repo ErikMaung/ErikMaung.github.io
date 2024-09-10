@@ -17,6 +17,15 @@
   text-align: center;
 }
 
+.fade-container {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.fade-container.active {
+  opacity: 1;
+}
+
 .footer {
   bottom: 10px;
   padding: 2rem;

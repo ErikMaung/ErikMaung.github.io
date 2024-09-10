@@ -26,8 +26,8 @@ const Shop = ({ scaleValue, setIncrementAmt, incrementAmt, mps, setMps, points, 
     return (
         <div className="shop-root vertical">
             <div className="stats-window">
-                <p className="stats">Money per click: <span className="bold">${money(incrementAmt)}</span></p>
-                <p className="stats">Money per second: <span className="bold">${money(mps)}</span></p>
+                <p className="stats">Money per click (mpc): <span className="bold">${money(incrementAmt)}</span></p>
+                <p className="stats">Money per second (mps): <span className="bold">${money(mps)}</span></p>
             </div>
             <div className="shop-title-container">
                 <p className="shop-title">Shop</p>
@@ -42,7 +42,7 @@ const Shop = ({ scaleValue, setIncrementAmt, incrementAmt, mps, setMps, points, 
                     }}
                     onClick={handleShop1}
                 >
-                    Upgrade Button Click: <span className="bold">${money(shop1Price)}</span>
+                    Upgrade Button Click (+1 mpc): <span className="bold">${money(shop1Price)}</span>
                 </Button>
                 <Button
                     className={`custom-button`}
@@ -53,7 +53,7 @@ const Shop = ({ scaleValue, setIncrementAmt, incrementAmt, mps, setMps, points, 
                     }}
                     onClick={handleShop2}
                 >
-                    Upgrade Passive Income: <span className="bold">${money(shop2Price)}</span>
+                    Upgrade Passive Income (+1 mps): <span className="bold">${money(shop2Price)}</span>
                 </Button>
             </div>
         </div >
