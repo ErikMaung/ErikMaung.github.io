@@ -3,6 +3,7 @@ import { Button } from '@mantine/core';
 import { useState } from 'react';
 import money from '../common.js';
 import './IncrementButton.css';
+import '../common.css';
 
 function IncrementButton({ type, scaleValue, incrementAmt, setWantsToPlay, setPoints, points }) {
   const handleincrement = (event) => {

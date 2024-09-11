@@ -132,8 +132,8 @@ const Game = ({ scaleValue }) => {
                 <Shop scaleValue={scaleValue} setIncrementAmt={setIncrementAmt} incrementAmt={incrementAmt} mps={mps} setMps={setMps} points={points} setPoints={setPoints} shopPrices={shopPrices} setShopPrices={setShopPrices} />
             </div> : undefined}
             <div className="button-group">
-                <CustomButton label={exportedMessage ? exportedMessage : 'Export Save'} type={exportedMessage ? 'success' : 'primary'} onClick={exportSave} scaleValue={scaleValue}></CustomButton>
-                <label className={`custom-button ${importedMessage ? 'success' : 'primary'}`} style={{'--scale-value': scaleValue,}}>
+                <CustomButton label={exportedMessage ? exportedMessage : 'Export Save'} type={exportedMessage ? 'success' : 'secondary'} onClick={exportSave} scaleValue={scaleValue}></CustomButton>
+                <label className={`custom-button ${importedMessage ? 'success' : 'secondary'}`} style={{'--scale-value': scaleValue,}}>
                     {importedMessage ? importedMessage : 'Import Save'}
                     <input
                         key={fileInputKey} type="file"
