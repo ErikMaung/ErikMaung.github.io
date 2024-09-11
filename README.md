@@ -10,6 +10,8 @@ For my portfolio, navigate to the [portfolio subdirectory](https://erikmaung.git
 Work In Progress Features:
 * add sound to speaker
 * add videos and images to projects
+* dont allow text select in My Resume
+* smooth transition showing and hiding resume
 * Smoother UI fade in and fade out
 * GAME: Local Storage Save and Load
 * Allow players to save and load manually
