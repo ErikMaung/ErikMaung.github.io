@@ -126,7 +126,7 @@ const Game = ({ scaleValue }) => {
         <Container>
             <div className="button-group vertical scaling" >
                 <RngButton type={"primary"} scaleValue={scaleValue} />
-                <IncrementButton type={"success"} scaleValue={scaleValue} incrementAmt={incrementAmt} setWantsToPlay={setWantsToPlay} setPoints={setPoints} points={points} />
+                <IncrementButton type={"success"} scaleValue={scaleValue} incrementAmt={incrementAmt} wantsToPlay={wantsToPlay} setWantsToPlay={setWantsToPlay} setPoints={setPoints} points={points} />
             </div >
             {wantsToPlay ? <div className="button-group">
                 <Shop scaleValue={scaleValue} setIncrementAmt={setIncrementAmt} incrementAmt={incrementAmt} mps={mps} setMps={setMps} points={points} setPoints={setPoints} shopPrices={shopPrices} setShopPrices={setShopPrices} />

@@ -14,6 +14,8 @@ function App() {
   const [isGame, setIsGame] = useState(false);
   const [scaleValue, setScaleValue] = useState(1.1);
   const [showOverlay, setShowOverlay] = useState(false);
+  const [showSpeakerOverlay, setShowSpeakerOverlay] = useState(false);
+  const [isSpeakerOn, setIsSpeakerOn] = useState(false);
 
   const toggleGame = () => {
     setScaleValue(scaleValue === 1.1 ? 1.5 : 1.1);
@@ -30,7 +32,7 @@ function App() {
     <MantineProvider className='root'>
       <div className={`fade-container ${isGame ? 'active' : ''}`}>
         <Draggable>
-          <Speaker isGame={isGame} />
+          <Speaker isGame={isGame} isSpeakerOn={isSpeakerOn} setIsSpeakerOn={setIsSpeakerOn} />
         </Draggable>
       </div>
       <Title className='warning'>
@@ -52,7 +54,7 @@ function App() {
         <Game scaleValue={scaleValue} />
       </div>
       
-        <div className={`overlay-message ${showOverlay ? '' : 'hide'}`}>
+        <div className={`overlay-message overlay-center overlay-top ${showOverlay ? '' : 'hide'}`}>
           Scroll to the bottom to play the game!
         </div>
       
