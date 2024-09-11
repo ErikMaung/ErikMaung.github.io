@@ -131,17 +131,16 @@ const Game = ({ scaleValue }) => {
             {wantsToPlay ? <div className="button-group">
                 <Shop scaleValue={scaleValue} setIncrementAmt={setIncrementAmt} incrementAmt={incrementAmt} mps={mps} setMps={setMps} points={points} setPoints={setPoints} shopPrices={shopPrices} setShopPrices={setShopPrices} />
             </div> : undefined}
-            {wantsToPlay ?
-                <div className="button-group">
-                    <CustomButton label={exportedMessage ? exportedMessage : 'Export Save'} type={exportedMessage ? 'success' : 'primary'} onClick={exportSave} scaleValue={scaleValue}></CustomButton>
-                    <label className={`custom-button ${importedMessage ? 'success' : 'primary'}`}>
-                        {importedMessage ? importedMessage : 'Import Save'}
-                        <input
-                            key={fileInputKey} type="file"
-                            onChange={importSave} style={{ display: 'none' }}
-                        />
-                    </label>
-                </div> : undefined}
+            <div className="button-group">
+                <CustomButton label={exportedMessage ? exportedMessage : 'Export Save'} type={exportedMessage ? 'success' : 'primary'} onClick={exportSave} scaleValue={scaleValue}></CustomButton>
+                <label className={`custom-button ${importedMessage ? 'success' : 'primary'}`} style={{'--scale-value': scaleValue,}}>
+                    {importedMessage ? importedMessage : 'Import Save'}
+                    <input
+                        key={fileInputKey} type="file"
+                        onChange={importSave} style={{ display: 'none' }}
+                    />
+                </label>
+            </div>
         </Container>
     )
 };

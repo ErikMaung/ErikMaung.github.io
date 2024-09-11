@@ -8,6 +8,8 @@ For my portfolio, navigate to the [portfolio subdirectory](https://erikmaung.git
 
 
 Work In Progress Features:
+* add sound to speaker
+* add videos and images to projects
 * Smoother UI fade in and fade out
 * GAME: Local Storage Save and Load
 * Allow players to save and load manually
@@ -18,3 +20,4 @@ Work In Progress Features:
 * add "copied to clipboard" message popup
 * replace My Resume with interactive
 * (make icons with company logos, include how long, duration, tech, etc.)
+* button click and passive income is unbalanced. rebalance prices, power
