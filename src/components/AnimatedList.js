@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './AnimatedList.css';
+import '../common.css';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 const email = 'E-Mail: erikmaung1@gmail.com';
 const phone = 'Phone: (626)-624-1560';
@@ -10,12 +11,19 @@ function AnimatedList() {
   const [items2, setItems2] = useState(['LinkedIn', email, phone]);
   const [links2, setLinks2] = useState(['https://www.linkedin.com/in/erik-maung/', undefined, undefined]);
   const [animate, setAnimate] = useState(false);
-
+  const [showOverlay, setShowOverlay] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
     setIsVisible(!isVisible);
   };
+
+  const handleCopy = () => {
+    setShowOverlay(true);
+    setTimeout(() => {
+        setShowOverlay(false);
+    }, 2000); // 2 sec
+  }
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -26,6 +34,9 @@ function AnimatedList() {
 
   return (
     <>
+      <div className={`overlay-message overlay-center overlay-top ${showOverlay ? '' : 'hide'}`}>
+        Copied to Clipboard!
+      </div>
       <div className={`list-container ${isVisible ? 'visible' : ''}`}>
         <div onClick={toggleVisibility} style={{ width: '80vw' }}>
           <h2>My Resume (click to {isVisible ? 'hide' : 'show'})</h2>
@@ -55,7 +66,7 @@ function AnimatedList() {
           <h2>Contact</h2>
           <ul className="animated-list">
             {items2.map((item, index) => (
-              <CopyToClipboard text={item === email ? 'erikmaung1@gmail.com' : item === phone ? '6266241560' : undefined}>
+              <CopyToClipboard text={item === email ? 'erikmaung1@gmail.com' : item === phone ? '6266241560' : undefined} onCopy={handleCopy}>
                 <li key={index} className={`list-item ${animate ? 'animate' : ''} ${item === email ? undefined : undefined}`}>
                   <a href={links2[index]} target="_blank" rel="noopener noreferrer">
                     <span>{item}</span>

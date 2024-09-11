@@ -15,7 +15,7 @@ const Speaker = ({ isGame, isSpeakerOn, setIsSpeakerOn }) => {
             setShowOverlay(true);
             setTimeout(() => {
                 setShowOverlay(false);
-            }, 3000); // 3 sec
+            }, 4000); // 4 sec
         }
         setIsSpeakerOn(prevState => (isDragging ? prevState : !prevState));
     };
