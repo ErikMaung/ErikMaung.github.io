@@ -1,9 +1,14 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .app-container {
   padding: 2rem;
   background-color: #f0f4f8;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  min-height: 75vh;
 }
 
 .app-title {
@@ -28,15 +33,18 @@
   pointer-events: all;
 }
 
-.fade-container.no-space {
-  height: 0px !important;
-  width: 0px !important;
-}
-
 .footer {
   bottom: 10px;
   padding: 2rem;
   border-radius: 15px;
+  margin-top: auto;
+}
+
+.no-space {
+  display: hidden;
+  position: fixed;
+  height: 0px !important;
+  width: 0px !important;
 }
 
 .overlay-message {

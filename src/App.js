@@ -48,7 +48,7 @@ function App() {
         <AnimatedList />
       </Container>
       <Container className={`experiment rotate`} />
-      <div className={`fade-container ${isGame ? 'active' : ''}`}>
+      <div className={`fade-container ${isGame ? 'active' : 'no-space'}`}>
         <Game scaleValue={scaleValue} />
       </div>
       

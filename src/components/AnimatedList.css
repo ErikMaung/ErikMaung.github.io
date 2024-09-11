@@ -40,6 +40,24 @@ h2 {
   margin-bottom: 16px;
 }
 
+.resume-container {
+  max-height: 0;
+  overflow: hidden; /* Hide overflowing content */
+  transition: max-height 0.5s ease; /* Smooth transition for max-height */
+}
+
+.list-container.visible .resume-container {
+  max-height: 925px;
+}
+
+.resume {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+
 .list-item {
   opacity: 0;
   transform: translateX(-50px);

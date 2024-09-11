@@ -26,17 +26,17 @@ function AnimatedList() {
 
   return (
     <>
-      <div className="list-container">
-        <div onClick={toggleVisibility} style={{width:'80vw'}}>
+      <div className={`list-container ${isVisible ? 'visible' : ''}`}>
+        <div onClick={toggleVisibility} style={{ width: '80vw' }}>
           <h2>My Resume (click to {isVisible ? 'hide' : 'show'})</h2>
         </div>
-        {isVisible && (
+        <div className="resume-container">
           <img
             className="resume"
             src={require('../images/resume.png')}
             alt="Resume"
           />
-        )}
+        </div>
       </div>
       <div className="flex">
         <div className="list-container">
