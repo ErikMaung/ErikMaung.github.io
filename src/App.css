@@ -28,6 +28,11 @@
   pointer-events: all;
 }
 
+.fade-container.no-space {
+  height: 0px !important;
+  width: 0px !important;
+}
+
 .footer {
   bottom: 10px;
   padding: 2rem;

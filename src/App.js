@@ -14,7 +14,7 @@ function App() {
   const [isFun, setIsFun] = useState(false);
   const [scaleValue, setScaleValue] = useState(1.1);
   const toggleFun = () => {
-    setScaleValue(scaleValue === 1.1 ? 1.9 : 1.1);
+    setScaleValue(scaleValue === 1.1 ? 1.5 : 1.1);
     setIsFun(!isFun);
   };
 
@@ -26,23 +26,23 @@ function App() {
         </Draggable>
       </div>
       <Title className='warning'>
-        This website is under renovations. A stable release will be issued by October 2024.
+        This website is under renovations. A stable release will be issued in October 2024.
       </Title>
       <Container className="app-container">
         <Title className="app-title" order={1}>
           Erik Maung's Homepage
         </Title>
         <div className="button-group">
-          <CustomButton label="Home" type={isFun ? "secondary" : "secondary"} scaleValue={1.1} />
+          <CustomButton label="Home" type={"disabled"} scaleValue={1.0} />
           <CustomButton label="Portfolio" type={isFun ? "primary" : "secondary"} href={"https://erikmaung.github.io/portfolio"} scaleValue={scaleValue} />
           <CustomButton label={isFun ? "Fun: ON" : "Fun: OFF"} type={isFun ? "success" : "secondary"} scaleValue={scaleValue} onClick={toggleFun} />
         </div>
         <AnimatedList />
       </Container>
       <Container className={`experiment rotate`} />
-      {isFun ?
+      <div className={`fade-container ${isFun ? 'active' : ''}`}>
         <Game scaleValue={scaleValue} />
-        : undefined}
+      </div>
       <Container className="footer">
         &copy; Erik Maung 2024
       </Container>
