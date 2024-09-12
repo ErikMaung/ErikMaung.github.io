@@ -7,7 +7,7 @@ const phone = 'Phone: (626)-624-1560';
 
 function AnimatedList() {
   const [items, setItems] = useState(['SoundSage MERN Stack Project', 'Generative Text LSTM Movie Review Generator', 'UCLA Undergraduate Research Week Presentation 2023 - VR Prism Adaptation']);
-  const [links, setLinks] = useState(['https://github.com/ethanbresk/soundsage', 'https://github.com/ErikMaung/review-generator', 'https://www.youtube.com/watch?v=Etus7gOQbMQ']);
+  const [links, setLinks] = useState(['https://www.youtube.com/watch?v=bBCcHEBIWXM', 'https://github.com/ErikMaung/review-generator', 'https://www.youtube.com/watch?v=Etus7gOQbMQ']);
   const [items2, setItems2] = useState(['LinkedIn', email, phone]);
   const [links2, setLinks2] = useState(['https://www.linkedin.com/in/erik-maung/', undefined, undefined]);
   const [animate, setAnimate] = useState(false);
