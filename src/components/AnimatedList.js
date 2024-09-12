@@ -38,7 +38,7 @@ function AnimatedList() {
         Copied to Clipboard!
       </div>
       <div className={`list-container ${isVisible ? 'visible' : ''}`}>
-        <div onClick={toggleVisibility} style={{ width: '80vw' }}>
+        <div onClick={toggleVisibility} style={{ width: '80vw', cursor: 'pointer' }}>
           <h2>My Resume (click to {isVisible ? 'hide' : 'show'})</h2>
         </div>
         <div className="resume-container">
