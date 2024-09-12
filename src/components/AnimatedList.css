@@ -48,11 +48,12 @@ h2 {
 }
 
 .list-container.visible .resume-container {
-  max-height: 925px;
+  max-height: 1125px;
 }
 
 .resume {
-  max-width: 100%;
+  max-width: 80vw;
+  width: 900px;
   height: auto;
   display: block;
   margin-top: 10px;
@@ -90,11 +91,4 @@ h2 {
   font-weight: 500;
   transform: translateX(10px);
   transition: transform 0.3s ease;
-}
-
-.resume {
-  display: flex;
-  justify-content: center;
-  max-width: 720px;
-  width: 75vw;
 }
