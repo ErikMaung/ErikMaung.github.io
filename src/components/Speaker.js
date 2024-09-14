@@ -5,6 +5,7 @@ import './Speaker.css';
 import '../common.css';
 import Draggable from 'react-draggable';
 import backgroundAudio from '../assets/anothermedium.ogg';
+import { isMobile } from 'react-device-detect';
 
 const Speaker = ({ isGame, isSpeakerOn, setIsSpeakerOn }) => {
     const [isDragging, setIsDragging] = useState(false);
@@ -46,18 +47,27 @@ const Speaker = ({ isGame, isSpeakerOn, setIsSpeakerOn }) => {
         };
     }, [isSpeakerOn]);
 
-    return (
-        <Draggable disable={!isGame} onDrag={handleDrag} onStop={handleStop}>
-            <div className='speaker-container'>
-                <div className={`speaker ${isSpeakerOn ? 'regular' : 'regular'}`} onClick={toggleSpeaker}>
-                    {isSpeakerOn ? <SpeakerOn style={{ display: 'block', margin: '10px' }} /> : <SpeakerOff style={{ display: 'block', margin: '10px' }} />}
+    if (!isMobile) {
+        return (
+            <Draggable disable={!isGame} onDrag={handleDrag} onStop={handleStop} >
+                <div className='speaker-container'>
+                    <div className={`speaker ${isSpeakerOn ? 'regular' : 'regular'}`} onClick={toggleSpeaker}>
+                        {isSpeakerOn ? <SpeakerOn style={{ display: 'block', margin: '10px' }} /> : <SpeakerOff style={{ display: 'block', margin: '10px' }} />}
+                    </div>
+                    <div className={`overlay-message overlay-left-2nd overlay-top-small ${showOverlay ? '' : 'hide'}`} style={{ width: '292px' }}>
+                        Playing: "Another Medium" - Toby Fox
+                    </div>
                 </div>
-                <div className={`overlay-message overlay-left-2nd overlay-top-small ${showOverlay ? '' : 'hide'}`} style={{ width: '292px' }}>
-                    Playing: "Another Medium" - Toby Fox
-                </div>
-            </div>
-        </Draggable>
-    );
+            </Draggable >
+        );
+    } else {
+        return (
+            <Draggable disable={true}>
+                <></>
+            </Draggable >
+        );
+
+    }
 };
 
 export default Speaker;
