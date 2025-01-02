@@ -36,7 +36,7 @@ function App() {
         </Draggable>
       </div>
       <Title className='warning'>
-        This website is under renovations. A new release will be issued in December 2024.
+        This website is under renovations. A new release will be issued in early 2025.
       </Title>
       <Container className="app-container">
         <Title className="app-title" order={1}>
@@ -59,7 +59,7 @@ function App() {
         </div>
       
       <Container className="footer">
-        &copy; Erik Maung 2024
+        &copy; Erik Maung 2025
       </Container>
     </MantineProvider>
   );
