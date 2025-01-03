@@ -36,7 +36,7 @@ function App() {
         </Draggable>
       </div>
       <Title className='warning'>
-        This website is under renovations. A new release will be issued in early 2025.
+        This website is under renovations. A stable release will be issued in early 2025.
       </Title>
       <Container className="app-container">
         <Title className="app-title" order={1}>
