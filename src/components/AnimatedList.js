@@ -28,7 +28,7 @@ function AnimatedList() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setAnimate(true);
-    }, 100);
+    }, 100); 
     return () => clearTimeout(timeout);
   }, []);
 
