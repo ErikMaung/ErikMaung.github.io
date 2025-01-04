@@ -22,7 +22,7 @@ function AnimatedList() {
     setShowOverlay(true);
     setTimeout(() => {
       setShowOverlay(false);
-    }, 2000); // 2 sec
+    }, 2000); // 2 seconds
   }
 
   useEffect(() => {
