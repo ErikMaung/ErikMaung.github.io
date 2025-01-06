@@ -16,7 +16,7 @@ function App() {
   const [showOverlay, setShowOverlay] = useState(false);
   const [showSpeakerOverlay, setShowSpeakerOverlay] = useState(false);
   const [isSpeakerOn, setIsSpeakerOn] = useState(false);
-
+  const year = '2025';
   const toggleGame = () => {
     setScaleValue(scaleValue === 1.1 ? 1.5 : 1.1);
     setIsGame(!isGame);
