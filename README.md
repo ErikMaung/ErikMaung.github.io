@@ -8,6 +8,7 @@ For my portfolio, navigate to the [portfolio subdirectory](https://erikmaung.git
 
 
 Work In Progress Features:
+* more modern and sophisticated site theme
 * add sound to speaker
 * add videos and images to projects
 * dont allow text select in My Resume
