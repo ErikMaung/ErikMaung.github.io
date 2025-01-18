@@ -1,6 +1,6 @@
 # Erik Maung's Page
 
-Work in Progress
+Work in Progress.
 
 &copy; 2025
 
