@@ -2,7 +2,7 @@
 
 Work in Progress.
 
-&copy; 2025
+&copy; 2025.
 
 This is the home page of [Erik Maung's GitHub pages](https://erikmaung.github.io).
 
