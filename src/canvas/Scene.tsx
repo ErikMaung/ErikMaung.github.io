@@ -14,7 +14,7 @@ function Box({ position, color, hoverColor, children }: Props) {
     const [hovered, setHover] = useState(false)
     const [active, setActive] = useState(false)
 
-    useFrame((state, delta) => {
+    useFrame((_state, delta) => {
         meshRef.current.rotation.x += delta
         meshRef.current.rotation.y += delta * 1.5
     })
