@@ -1,43 +1,19 @@
-import { Mesh } from 'three'
-import { useState, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
+import LinkCard from '../components/LinkCard'
+import { Typewriter } from '../components/Typewriter'
+import Box from '../components/Box'
 import { ScrollControls, Scroll, useScroll } from '@react-three/drei'
 import Countdown from '../components/Countdown'
-
-interface Props {
-    position: [number, number, number];
-    color?: string;
-    hoverColor?: string;
-    children?: React.ReactNode;
-}
-
-function Box({ position, color = 'lightblue', hoverColor = 'cornflowerblue', children }: Props) {
-    const meshRef = useRef<Mesh>(null!)
-    const [hovered, setHover] = useState(false)
-    const [active, setActive] = useState(false)
-
-    useFrame((_state, delta) => {
-        meshRef.current.rotation.x += delta
-        meshRef.current.rotation.y += delta * 1.5
-    })
-
-    return (
-        <mesh
-            ref={meshRef}
-            position={position}
-            scale={active ? 2.4 : 1.2}
-            onClick={() => setActive(!active)}
-            onPointerOver={() => setHover(true)}
-            onPointerOut={() => setHover(false)}
-        >
-            {children ?? <boxGeometry args={[1, 1, 1]} />}
-            <meshStandardMaterial color={hovered ? hoverColor : color} />
-        </mesh>
-    )
-}
+import './Scene.css'
 
 function SceneContent() {
     const scroll = useScroll()
+    const titles = [
+        "Scale AI: GenAI Tech Advisor",
+        "MSCS at Georgia Tech",
+        "UCLA Math of Computation BS",
+        "Full Stack Engineer"
+    ];
 
     useFrame((state) => {
         // scroll.offset goes from 0 to 1 as you scroll
@@ -51,7 +27,7 @@ function SceneContent() {
         <>
             <ambientLight intensity={0.5} />
             <directionalLight position={[10, 10, 5]} intensity={1} />
-            <Box position={[2, 3, -1]} />
+            <Box position={[1, 3, -1]} />
             <Box
                 position={[-2, -4, -4]}
                 color='#feaebd'
@@ -67,7 +43,7 @@ function SceneContent() {
                 hoverColor='#5b8e72'
             />
             <Box
-                position={[5, -3, -12]}
+                position={[5, -1, -12]}
                 color='#fecdae'
                 hoverColor='#d6834f'
             />
@@ -77,19 +53,40 @@ function SceneContent() {
                 hoverColor='#97d'
             />
             <Scroll html style={{ width: '100vw' }}>
-                <main style={{ position: 'relative', zIndex: 2, pointerEvents: 'none' }}>
-                    <section style={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                        <h1 style={{ pointerEvents: 'auto', color: 'white', fontSize: '12vw' }}>Erik Maung</h1>
-                        <p style={{ pointerEvents: 'auto', color: 'lightgray', fontSize: '3vw' }}>Computing Systems</p>
+                <main style={{ position: 'relative', height: '400vh', zIndex: 2, pointerEvents: 'none' }}>
+                    <section style={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', userSelect: 'none' }}>
+                        <h1 style={{ pointerEvents: 'auto', color: 'white', fontSize: 'max(12vw, 16px)' }}>Erik Maung</h1>
+                        <p style={{ pointerEvents: 'auto', color: 'lightgray', fontSize: 'max(3vw, 16px)' }}>
+                            <Typewriter phrases={titles} showCursor={true} />
+                        </p>
                     </section>
 
                     {/* Use Format for Countdown: 2025-12-31T23:59:59 */}
                     <section style={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', fontFamily: 'GeneralSans' }}>
                         <Countdown targetDate='2025-12-31T23:59:59' />
-                        <p style={{ pointerEvents: 'auto', color: 'white', fontSize: '3vw' }}>January 1st, 2026</p>
+                        <p style={{ pointerEvents: 'auto', color: 'white', fontSize: 'max(3vw, 16px)' }}>January 1st, 2026</p>
                     </section>
-                    <section style={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', fontFamily: 'GeneralSans' }}>
-                        <p style={{ pointerEvents: 'auto', color: 'white', fontSize: '6vw' }}>Coming Soon</p>
+
+                    <section style={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                        <h2 style={{ color: 'white', fontSize: 'max(4vw, 32px)', marginBottom: '2rem' }}>Let's Connect</h2>
+
+                        <div style={{ width: '90%', maxWidth: '500px', fontFamily: 'GeneralSans' }}>
+                            <LinkCard
+                                href="mailto:erikmaung1@gmail.com"
+                                label="Email"
+                                subtext="erikmaung1 [at] gmail [dot] com"
+                            />
+                            <LinkCard
+                                href="https://www.linkedin.com/in/erik-maung/"
+                                label="LinkedIn"
+                                subtext="Professional network & experience"
+                            />
+                            <LinkCard
+                                href="https://github.com/erikmaung"
+                                label="GitHub"
+                                subtext="Source code & open source projects"
+                            />
+                        </div>
                     </section>
                 </main>
             </Scroll>

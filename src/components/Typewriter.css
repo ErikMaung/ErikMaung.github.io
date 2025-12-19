@@ -1,0 +1,8 @@
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Apply this class to the <span> in the Typewriter component */
+.cursor-blink {
+  animation: blink 0.8s step-end infinite;
+}

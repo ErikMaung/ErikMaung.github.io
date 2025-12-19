@@ -27,11 +27,11 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    return () => clearInterval(timer); // Cleanup on unmount
+    return () => clearInterval(timer);
   }, [targetDate]);
 
   return (
-    <h1 style={{fontSize: '10vw'}}>
+    <h1 style={{fontSize: '10vw', fontWeight: '520'}}>
       {timeLeft.days > 9 ? '' : '0'}{timeLeft.days}:
       {timeLeft.hours > 9 ? '' : '0'}{timeLeft.hours}:
       {timeLeft.minutes > 9 ? '' : '0'}{timeLeft.minutes}:

@@ -1,0 +1,19 @@
+div.contact {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vw;
+}
+
+div.contact * {
+    pointer-events: auto;
+    user-select: none;
+    color: #d2d2ff;
+    margin-top: 2vw;
+    font-size: max(2vw, 16px);
+}
+
+div.contact a:hover {
+    color: #a0a0ee;
+}
