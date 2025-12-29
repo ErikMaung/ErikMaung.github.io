@@ -30,8 +30,15 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
     return () => clearInterval(timer);
   }, [targetDate]);
 
+  if (timeLeft.days == 0 && timeLeft.hours == 0 && timeLeft.minutes == 0 && timeLeft.seconds == 0) {
+    return (
+      <h1 style={{ fontSize: '10vw', fontWeight: '520' }}>
+        Happy New Year!
+      </h1>
+    );
+  }
   return (
-    <h1 style={{fontSize: '10vw', fontWeight: '520'}}>
+    <h1 style={{ fontSize: '10vw', fontWeight: '520' }}>
       {timeLeft.days > 9 ? '' : '0'}{timeLeft.days}:
       {timeLeft.hours > 9 ? '' : '0'}{timeLeft.hours}:
       {timeLeft.minutes > 9 ? '' : '0'}{timeLeft.minutes}:

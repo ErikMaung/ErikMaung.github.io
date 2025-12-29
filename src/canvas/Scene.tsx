@@ -61,12 +61,6 @@ function SceneContent() {
                         </p>
                     </section>
 
-                    {/* Use Format for Countdown: 2025-12-31T23:59:59 */}
-                    <section style={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', fontFamily: 'GeneralSans' }}>
-                        <Countdown targetDate='2025-12-31T23:59:59' />
-                        <p style={{ pointerEvents: 'auto', color: 'white', fontSize: 'max(3vw, 16px)' }}>January 1st, 2026</p>
-                    </section>
-
                     <section style={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                         <h2 style={{ color: 'white', fontSize: 'max(4vw, 32px)', marginBottom: '2rem' }}>Let's Connect</h2>
 
@@ -88,6 +82,13 @@ function SceneContent() {
                             />
                         </div>
                     </section>
+
+                    {/* Use Format for Countdown: 2025-12-31T23:59:59 */}
+                    <section style={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', fontFamily: 'GeneralSans' }}>
+                        <Countdown targetDate='2025-12-31T23:59:59' />
+                        <p style={{ pointerEvents: 'auto', color: 'white', fontSize: 'max(3vw, 16px)' }}>{`January 1st, 2026`}</p>
+                    </section>
+
                 </main>
             </Scroll>
         </>
