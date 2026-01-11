@@ -1,9 +1,17 @@
 # Portfolio of Erik Maung
 This is my personal webpage.
 
-Version: v0.0.0
+Version: v1.0.0
 
-v1.0.0 Release Date: January 1st, 2026
+## Release Notes
+### 1.0.0 -- 2026.01.11
+- Automated updates to countdown to display upcoming holiday from a list, we have countdowns year round!
+- Minor UI improvements
+
+### 0.0.0 -- 2025.12.28
+- Finish polishing New Year's Countdown timer
+- Typewriter subtitle effects and content finalize
+- Repsonsiveness
 
 ## Upcoming Features
 - Better font size responsiveness for smaller display screens
